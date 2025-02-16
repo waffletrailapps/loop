@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@pages/*": ["pages/*"],
+      "@locators/*": ["locators/*"],
+      "@config/*": ["config/*"],
+      "@utils/*": ["utils/*"]
+    }
+  }
+}

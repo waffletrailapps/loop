@@ -1,0 +1,7 @@
+app_type,app_name,task_name,column_name,tags
+Web,Web Application,Implement user authentication,To Do,Feature|High Priority
+Web,Web Application,Fix navigation bug,To Do,Bug
+Web,Web Application,Design system updates,In Progress,Design
+Mobile,Mobile Application,Push notification system,To Do,Feature
+Mobile,Mobile Application,Offline mode,In Progress,Feature|High Priority
+Mobile,Mobile Application,App icon design,Done,Design

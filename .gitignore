@@ -1,0 +1,45 @@
+### Node.js dependencies
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+### Playwright and Test Reports
+playwright-report/
+test-results/
+
+### Environment Variables
+.env
+
+### VS Code settings
+.vscode/
+
+### Logs and Cache
+*.log
+logs/
+*.cache
+
+### Screenshots and Videos
+screenshots/
+videos/
+*.mp4
+*.webm
+
+### Compiled TypeScript
+*.tsbuildinfo
+dist/
+out/
+
+### macOS system files
+.DS_Store
+
+### Windows system files
+Thumbs.db
+
+### Coverage Reports
+coverage/
+
+### Temporary Files
+*.tmp
+*.swp
+

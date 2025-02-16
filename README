@@ -1,0 +1,162 @@
+# 🚀 Playwright Data-Driven Test Automation Framework
+
+This repository contains a **data-driven test automation framework** built with **Playwright** and **TypeScript**. The framework utilizes **CSV-driven test cases**, **dynamic locators**, and **screenshot capturing with element highlighting**.
+
+---
+
+## 📖 Table of Contents
+- [🛠 Setup & Installation](#-setup--installation)
+- [📂 Framework Structure](#-framework-structure)
+- [📜 Running Tests](#-running-tests)
+- [📊 Viewing Reports](#-viewing-reports)
+- [🐛 Debugging & Troubleshooting](#-debugging--troubleshooting)
+- [🔧 Enhancements & Future Improvements](#-enhancements--future-improvements)
+
+---
+
+## 🛠 Setup & Installation
+
+### **1️⃣ Prerequisites**
+Make sure you have the following installed:
+- **[Node.js](https://nodejs.org/)** (v18+ recommended)
+- **npm** (Comes with Node.js)
+- **Playwright dependencies**
+  ```sh
+  npx playwright install
+  ```
+
+### **2️⃣ Install Project Dependencies**
+Run the following command to install all required dependencies:
+```sh
+npm install
+```
+
+### **3️⃣ Verify Installation**
+Ensure all dependencies are installed correctly:
+```sh
+npm list --depth=0
+```
+
+---
+
+## 📂 Framework Structure
+
+```
+📂 project-root
+├── 📂 config            # Environment variables & Playwright config
+│   ├── env.ts          # Loads environment variables
+│   ├── playwright.config.ts  # Playwright configuration
+│
+├── 📂 data              # CSV files for data-driven tests
+│   ├── projectBoardTestData.csv    # Test Cases for Board Verification
+│
+├── 📂 locators          # Centralized locators for elements
+│   ├── dashboardPageLocators.ts
+│   ├── locators.ts
+│
+├── 📂 pages             # Page Object Models (POMs)
+│   ├── dashboardPage.ts
+│   ├── loginPage.ts
+│
+├── 📂 tests             # Test scripts
+│   ├── projectBoard.spec.ts   # Test for multiple project boards
+│   ├── login.spec.ts       # Base Login Test
+│
+├── 📂 utils             # Utility functions (CSV reader, logging, etc.)
+│   ├── csvHelper.ts
+│   ├── loginHelper.ts
+│
+├── 📂 test-results      # Stores test reports & screenshots
+│   ├── 📂 screenshots   # Element-highlighted screenshots
+│   ├── 📂 report        # Playwright HTML reports
+│
+├── .env                 # Stores environment variables (e.g., login credentials)
+├── package.json         # Project dependencies & scripts
+├── tsconfig.json        # TypeScript configuration
+```
+
+---
+
+## 📜 Running Tests
+
+### **1️⃣ Run All Tests**
+```sh
+npx playwright test
+```
+
+### **2️⃣ Run Tests for Web Applications Only**
+```sh
+npx playwright test tests/webApp.spec.ts
+```
+
+### **3️⃣ Run Tests for Mobile Applications Only**
+```sh
+npx playwright test tests/mobileApp.spec.ts
+```
+
+### **4️⃣ Run a Single Test**
+```sh
+npx playwright test -g "Verify 'Implement user authentication'"
+```
+
+---
+
+## 📊 Viewing Reports
+
+### **📌 Generate and View Playwright Report**
+```sh
+npx playwright test --reporter=html
+npx playwright show-report
+```
+✔ **Includes screenshots** of passing & failing tests  
+✔ **Provides a detailed test execution timeline**  
+
+---
+
+## 🐛 Debugging & Troubleshooting
+
+### **📌 Pause Execution for Debugging**
+```ts
+await page.pause();
+```
+
+### **📌 Run Tests in Debug Mode**
+```sh
+npx playwright test --debug
+```
+
+### **📌 View All Installed Dependencies**
+```sh
+npm list --depth=0
+```
+
+### **📌 Reinstall Dependencies if Issues Occur**
+```sh
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### **📌 Capture Screenshots of Elements**
+This framework **automatically captures and highlights found elements** in screenshots.
+
+Check screenshots in:
+```
+test-results/screenshots/
+```
+
+---
+
+## 🔧 Enhancements & Future Improvements
+
+✅ **CI/CD Integration** → Configure Playwright to run in **GitHub Actions / Jenkins**  
+✅ **Add Test Retry Logic** → Automatically re-run flaky tests  
+✅ **Parallel Execution Optimization** → Further optimize test run times  
+✅ **API Testing** → Extend the framework with Playwright API testing  
+
+
+---
+
+### 👨‍💻 **Author**
+Developed by Kyla Beaty 
+📧 Contact: kylabeaty20@gmail.com
+🔗 GitHub: https://github.com/waffletrailapps
